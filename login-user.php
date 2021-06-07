@@ -29,7 +29,7 @@
                     ?>
 
 <?php
-			echo '<a href="loginFB.php"><img src="images/loginfb.png" alt="Login with Facebook" width=222></a><br>';
+			echo '<a href="loginFB.php"><img src="loginfb.png" alt="Login with Facebook" width=222></a><br>';
 			include_once 'loginG.php';
 			if(isset($_GET['code'])){
 				$gClient->authenticate($_GET['code']);
@@ -50,7 +50,7 @@
 				$_SESSION['logincust']='yes';
 			} else {
 				$authUrl = $gClient->createAuthUrl(); 
-				$output= '<a href="'.filter_var($authUrl, FILTER_SANITIZE_URL).'"><img src="images/loging.png" alt="Sign in with Google+" width=222/></a>';
+				$output= '<a href="'.filter_var($authUrl, FILTER_SANITIZE_URL).'"><img src="loging.png" alt="Sign in with Google+" width=222/></a>';
 			}
 			echo $output;
 		?>  
